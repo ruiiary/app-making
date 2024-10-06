@@ -13,7 +13,6 @@ var text_st = {
   margin: 10,
 };
 
-
 export default function Multiplication() {
   const [A, setA] = useState(0);
   const [B, setB] = useState(0);
@@ -27,13 +26,15 @@ export default function Multiplication() {
         <Text style={text_st}>=</Text>
         <Text style={input_st}>{A * B}</Text>
       </View>
-      <View style={{ flexDirection: "row" }}>
-        <Button
-          title="   +   "
-          onPress={function () {
-            setA(A + 1);
-          }}
-        />
+      <View style={{ flexDirection: "row", margin: 10 }}>
+        <View style={{ marginHorizontal: 20 }}>
+          <Button
+            title="   +   "
+            onPress={function () {
+              setA(A + 1);
+            }}
+          />
+        </View>
         <Button
           title="   +   "
           onPress={function () {
@@ -41,13 +42,15 @@ export default function Multiplication() {
           }}
         />
       </View>
-      <View style={{ flexDirection: "row" }}>
-        <Button
-          title="   -   "
-          onPress={function () {
-            setA(A - 1);
-          }}
-        />
+      <View style={{ flexDirection: "row", margin: 10 }}>
+        <View style={{ marginHorizontal: 20 }}>
+          <Button
+            title="   -   "
+            onPress={function () {
+              setA(A - 1);
+            }}
+          />
+        </View>
         <Button
           title="   -   "
           onPress={function () {
