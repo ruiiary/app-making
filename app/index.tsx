@@ -34,6 +34,13 @@ export default function Index() {
             router.navigate("multiplication");
           }}
         />
+        <View style={{ height: 10 }} />
+         <Button
+          title="piano"
+          onPress={function () {
+            router.navigate("piano");
+          }}
+        />
     </View>
   );
 }
