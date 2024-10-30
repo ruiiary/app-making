@@ -12,8 +12,7 @@ var text_st = {
 
 var input_st = { fontSize: 20, borderWidth: 1, flex: 1, padding: 5, margin: 5 };
 
-var N = ["Ewha", "June", "Jane", "Nick"];
-var P = [1234, 3347, 1111, 1212];
+var pbook = [{name:'Ewha', phone:1234}, {name:'June', phone:3347}, {name:'Jane', phone:1111}, {name:'Nick', phone:1212}];
 
 export default function App() {
   const [name, setName] = useState("");
@@ -21,23 +20,16 @@ export default function App() {
   const [refresh, setRefresh] = useState(0); // dummy state for forcing redraw
 
   function add_item() {
-    N.push(name);
-    P.push(phone);
+    pbook.push({name: name, phone: phone});
     setRefresh(refresh + 1); // dummy state for forcing redraw
   }
 
   var L = [];
 
-  for (var i = 0; i < N.length; i++) {
-    var a = (
-      <View style={{ flexDirection: "row" }}>
-        <Text style={text_st}>{N[i]}</Text>
-        <Text style={text_st}>{P[i]}</Text>
-      </View>
-    );
+  for (var i = 0; i < pbook.length; i++) {
+    var a = <Text style={{fontSize: 20}}>{pbook[i].name} : {pbook[i].phone} </Text>
     L.push(a);
   }
-  console.log(N, P);
 
   return (
     <View>

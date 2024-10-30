@@ -48,6 +48,13 @@ export default function Index() {
             router.navigate("boxinbox");
           }}
         />
+        <View style={{ height: 10 }} />
+         <Button
+          title="dice"
+          onPress={function () {
+            router.navigate("dice");
+          }}
+        />
     </View>
   );
 }
