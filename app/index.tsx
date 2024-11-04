@@ -55,6 +55,13 @@ export default function Index() {
             router.navigate("dice");
           }}
         />
+        <View style={{ height: 10 }} />
+         <Button
+          title="clock"
+          onPress={function () {
+            router.navigate("clock");
+          }}
+        />
     </View>
   );
 }
