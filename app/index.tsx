@@ -62,13 +62,6 @@ export default function Index() {
             router.navigate("clock");
           }}
         />
-        <View style={{ height: 10 }} />
-         <Button
-          title="weather"
-          onPress={function () {
-            router.navigate("weather");
-          }}
-        />
     </View>
   );
 }
