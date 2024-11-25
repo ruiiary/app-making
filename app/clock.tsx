@@ -30,6 +30,11 @@ export default function clock() {
     }
   }
 
+  var json_pbook = '[{"name": "June", "phone": "3347"}, {"name": "Ewha", "phone": "1122"}]';
+  var pbook = JSON.parse(json_pbook);
+  console.log(pbook[0].name);
+  console.log(pbook[1].phone);
+
   return (
     <View>
       <Text style={text_st}>
