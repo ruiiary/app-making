@@ -7,7 +7,12 @@ function Circle() {
 
 function Blank() {
   return (
-    <View style={[st_circle, { backgroundColor: undefined, borderWidth: 0 }]} />
+    <View
+      style={[
+        st_circle,
+        { backgroundColor: "rgb(255, 240, 200)", borderWidth: 0 },
+      ]}
+    />
   );
 }
 
@@ -159,19 +164,24 @@ function Dice(props) {
 
 export default function App() {
   const [N, setN] = useState(1);
+  const [M, setM] = useState(1);
 
   return (
     <ScrollView contentContainerStyle={{ alignItems: "center" }}>
       <View style={{ flex: 1 }}>
-        <Text style={st_text}>Dice</Text>
+        <Text style={st_text}>Double Dice</Text>
+        <Text style={st_text}>{N + M}</Text>
         <View style={{ flexDirection: "row", justifyContent: "center" }}>
           <Dice num={N} />
+          <View style={{ width: 15 }} />
+          <Dice num={M} />
         </View>
         <View style={{ marginHorizontal: 100, marginVertical: 30 }}>
           <Button
             title="Roll"
             onPress={function () {
               setN(Math.floor(Math.random() * 6 + 1));
+              setM(Math.floor(Math.random() * 6 + 1));
             }}
           />
         </View>

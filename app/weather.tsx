@@ -2,7 +2,7 @@ import { ScrollView, View, Text, Image } from "react-native";
 import { useState, useEffect } from "react";
 //import { API_KEY } from "@env";
 
-var url = `http://api.openweathermap.org/data/2.5/forecast?q=Seoul&units=metric&cnt=5&appid=`;
+var url = `http://api.openweathermap.org/data/2.5/forecast?q=Seoul&units=metric&cnt=5&appid=c9b8112129f50b492d546f1047acb8f8`;
 var st_text = { fontSize: 20 };
 
 const view_st = { flex: 1, padding: 20, flexDirection: "row" };

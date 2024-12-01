@@ -14,7 +14,7 @@ var text_st = {
 };
 
 export default function Multiplication() {
-  const [A, setA] = useState(0);
+  const [A, setA] = useS.tate(0);
   const [B, setB] = useState(0);
 
   return (
